@@ -30,21 +30,6 @@ img {
     display: block;
 }
 
-/* Mobile horizontal-scroll fix: prevent hero image from causing page overflow */
-@media (max-width: 768px) {
-
-    html,
-    body {
-        overflow-x: hidden;
-    }
-}
-
-
-.slide-card {
-    width: 90%;
-    max-width: 32.5rem;
-}
-
 @media (min-width: 1200px) {
     .slide-card {
         width: 34.375rem;
@@ -206,14 +191,6 @@ img {
     background: linear-gradient(to right, white 0%, rgb(177, 177, 177) 100%);
 }
 
-@media (max-width: 768px) {
-
-
-    .hero-title {
-        font-size: 2rem;
-    }
-}
-
 @media (max-width: 576px) {
 
 
@@ -296,18 +273,6 @@ img {
 
 .tasti-navbar:hover::before {
     opacity: 1;
-}
-
-
-/* Position overlay bottom-left on small screens */
-@media (max-width: 768px) {
-    .immagine-rete__overlay {
-        left: 4% !important;
-        right: 4% !important;
-        top: auto !important;
-        bottom: 6% !important;
-        transform: none !important;
-    }
 }
 
 .tasti-navbar:hover {
@@ -413,6 +378,11 @@ img {
     flex: 0 0 auto;
     position: relative;
     overflow: hidden;
+    transition: all 0.3s ease;
+}
+.slide-card:hover{
+    transform: scale(1.06);
+    z-index: 2;
 }
 
 .slide-img {
@@ -504,203 +474,6 @@ img {
     transform: none;
 }
 
-
-
-
-
-@media (max-width: 768px) {
-
-    .barra-navigazione .titolo {
-        font-size: 1.5rem;
-        padding-left: 0.5rem;
-    }
-
-    .hamburger-menu {
-        float: none;
-    }
-
-    .slide-card {
-        width: 60%;
-    }
-
-    .slider-btn {
-        width: 2.25rem;
-        height: 2.25rem;
-    }
-
-    .hero .col-6 {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .slide-card {
-        width: 25rem;
-    }
-
-    .slide-img {
-        height: auto;
-    }
-
-    .immagine-principale {
-        width: 70%;
-    }
-}
-
-
-@media (max-width: 992px) {
-
-    .barra-navigazione .link-navbar,
-    .barra-navigazione .tasti-navbar,
-    .barra-navigazione .link-navbar-selected {
-        display: none !important;
-    }
-
-    .slogan {
-        font-size: 3.5rem;
-    }
-
-    .col-6.d-flex {
-        flex-direction: column;
-        padding: 1rem;
-    }
-
-    .card {
-        width: 60%;
-    }
-
-    .titolo-paragrafo-1 {
-        font-size: 2.625rem;
-        margin-top: 3.75rem;
-        margin-bottom: 1.875rem;
-        padding: 0 1rem;
-        text-align: center;
-    }
-}
-
-
-@media (max-width: 576px) {
-    .slogan {
-        font-size: 2.125rem;
-        margin-bottom: 1.875rem;
-    }
-
-    .overlay-panel .panel-content {
-        padding: 1rem;
-    }
-
-    .overlay-panel .panel-content {
-        width: 70%;
-        max-width: 100%;
-    }
-
-    .overlay-panel .panel-content .close {
-        right: 0.75rem;
-    }
-
-    .card {
-        width: 55%;
-    }
-
-    .titolo-paragrafo-1 {
-        padding-left: 0;
-        padding-right: 20%;
-        font-size: 1.75rem;
-        margin-top: 2.5rem;
-        margin-bottom: 1.25rem;
-        line-height: 1.2;
-        text-align: left;
-    }
-
-    .paragrafo-1 {
-        font-size: 0.9375rem;
-        margin-bottom: 2.5rem;
-    }
-
-    .immagini-espositive .col-5 {
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-        width: 100% !important;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        margin-top: 3rem;
-    }
-
-    .immagini-espositive .col-1 {
-        display: none;
-    }
-
-    .immagini-espositive img {
-        width: 85%;
-        height: auto !important;
-        display: block;
-        border-radius: 1rem;
-    }
-
-    .tasti-navbar.scopri-btn,
-    .scopri-btn {
-        display: inline-block;
-        width: 90%;
-        padding: 0.75rem 1rem;
-        border-radius: 1.25rem;
-        text-align: center;
-        box-sizing: border-box;
-        margin-top: 0.75rem;
-    }
-
-    .intro-section .row>.col-2,
-    .intro-section .row>.col-5,
-    .intro-section .row>.col-7 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-
-    .intro-section .row>.col-2 {
-        justify-content: flex-start !important;
-        text-align: left !important;
-        padding-left: 1rem;
-        padding-right: 0.5rem;
-    }
-
-    .intro-section .col-2 .tasti-navbar {
-        align-self: flex-start;
-        margin-left: 0;
-        width: auto;
-    }
-
-    .cards-track {
-        padding-left: 0.75rem;
-        padding-right: 0.75rem;
-        gap: 0.75rem;
-
-        overflow-y: hidden;
-    }
-
-    .slide-card {
-        width: 80%;
-        max-width: 22.5rem;
-        flex: 0 0 auto;
-        box-shadow: 0 .25rem .6rem rgba(0, 0, 0, 0.12);
-    }
-
-    .slide-img {
-        height: 12.5rem;
-        object-fit: cover;
-    }
-
-    .slider-btn {
-        width: 2.25rem;
-        height: 2.25rem;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .reveal {
-        transition: none;
-        transform: none;
-    }
-}
-
-
 .faq-section {
     width: 100%;
     max-width: 880px;
@@ -747,23 +520,6 @@ img {
 }
 
 
-
-
-
-
-
-@media (max-width: 576px) {
-    .faq-section {
-        max-width: 92%;
-    }
-
-    .accordion-button {
-        font-size: 0.97rem;
-        padding: 0.95rem 1rem;
-    }
-}
-
-
 .stat-title {
     color: #333;
     margin: 0.25rem 0;
@@ -777,90 +533,6 @@ img {
     margin: 0.25rem 0;
     letter-spacing: -0.5px;
 }
-
-
-
-
-
-/* Responsive adjustments specific to `violenze` page */
-@media (max-width: 992px) {
-    .title-violenze {
-        font-size: 40px;
-        text-align: center;
-        margin-bottom: 0.25rem;
-        padding: 0 1rem;
-    }
-
-    .title-violenze+p {
-        text-align: center;
-        font-size: 1rem;
-        margin-top: 0.25rem;
-    }
-
-    /* Make the two-column stats area stack vertically */
-    .container-fluid .row.panel>.col-5,
-    .container-fluid .row.panel>.col-7 {
-        flex: 0 0 100%;
-        max-width: 100%;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
-    .stat-violenze {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 0.5rem;
-        padding: 1rem;
-    }
-
-    .stat-title {
-        font-size: 1.1rem;
-    }
-
-
-    .stat-number {
-        font-size: clamp(24px, 6vw, 36px);
-    }
-
-
-}
-
-@media (max-width: 576px) {
-    .title-violenze {
-        font-size: 28px;
-        padding: 0 0.75rem;
-    }
-
-    .stat-violenze {
-        flex-direction: column;
-        text-align: center;
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-
-    .stat-violenze .stat-title,
-    .stat-violenze .stat-number {
-        width: 100%;
-    }
-
-    .stat-number {
-        font-size: clamp(20px, 8vw, 32px);
-    }
-
-}
-
-@media (max-width: 576px) {
-    .stat-number {
-        font-size: clamp(20px, 8vw, 32px);
-    }
-
-}
-
-
-
-
 
 .stat-violenze {
     background: linear-gradient(to right, white 0%, rgb(177, 177, 177) 100%);
@@ -879,22 +551,6 @@ img {
 .title-violenze {
     font-size: 3.4375rem;
     font-weight: bolder;
-}
-
-/* Ensure hero image spans full viewport on small screens (full-bleed) */
-@media (max-width: 768px) {
-    .immagine-rete {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-
-
-    /* Prevent horizontal overflow from container gutters */
-    html,
-    body {
-        overflow-x: hidden;
-    }
 }
 
 
@@ -1001,7 +657,15 @@ img {
     font-size: 0.9rem
 }
 
+
+
 @media (max-width: 768px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
     .footer-inner {
         flex-direction: column;
         align-items: center;
@@ -1017,5 +681,272 @@ img {
         flex-direction: column;
         gap: .5rem;
         align-items: center
+    }
+
+    .immagine-rete {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .barra-navigazione .titolo {
+        font-size: 1.8rem;
+    }
+
+    .hamburger-menu {
+        float: none;
+    }
+
+    .slide-card {
+        width: 60%;
+    }
+
+    .slider-btn {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+
+    .hero .col-6 {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .slide-img {
+        height: auto;
+    }
+
+    .immagine-principale {
+        width: 70%;
+    }
+
+    .immagine-rete__overlay {
+        left: 4% !important;
+        right: 4% !important;
+        top: auto !important;
+        bottom: 6% !important;
+        transform: none !important;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .title-violenze {
+        font-size: 28px;
+        padding: 0 0.75rem;
+    }
+
+    .stat-violenze {
+        flex-direction: column;
+        text-align: center;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .stat-violenze .stat-title,
+    .stat-violenze .stat-number {
+        width: 100%;
+    }
+
+    .stat-number {
+        font-size: clamp(20px, 8vw, 32px);
+    }
+
+    .faq-section {
+        max-width: 92%;
+    }
+
+    .accordion-button {
+        font-size: 0.97rem;
+        padding: 0.95rem 1rem;
+    }
+
+    .slogan {
+        font-size: 2.125rem;
+        margin-bottom: 1.875rem;
+    }
+
+    .overlay-panel .panel-content {
+        padding: 1rem;
+        width: 70%;
+        max-width: 100%;
+    }
+
+    .overlay-panel .panel-content .close {
+        right: 0.75rem;
+    }
+
+    .card {
+        width: 55%;
+    }
+
+    .titolo-paragrafo-1 {
+        padding-left: 0;
+        padding-right: 20%;
+        font-size: 1.75rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1.25rem;
+        line-height: 1.2;
+        text-align: left;
+    }
+
+    .paragrafo-1 {
+        font-size: 0.9375rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .immagini-espositive .col-5 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 3rem;
+    }
+
+    .immagini-espositive .col-1 {
+        display: none;
+    }
+
+    .immagini-espositive img {
+        width: 85%;
+        height: auto !important;
+        display: block;
+        border-radius: 1rem;
+    }
+
+    .tasti-navbar.scopri-btn,
+    .scopri-btn {
+        display: inline-block;
+        width: 90%;
+        padding: 0.75rem 1rem;
+        border-radius: 1.25rem;
+        text-align: center;
+        box-sizing: border-box;
+        margin-top: 0.75rem;
+    }
+
+    .intro-section .row>.col-2,
+    .intro-section .row>.col-5,
+    .intro-section .row>.col-7 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .intro-section .row>.col-2 {
+        justify-content: flex-start !important;
+        text-align: left !important;
+        padding-left: 1rem;
+        padding-right: 0.5rem;
+    }
+
+    .intro-section .col-2 .tasti-navbar {
+        align-self: flex-start;
+        margin-left: 0;
+        width: auto;
+    }
+
+    .cards-track {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        gap: 0.75rem;
+
+        overflow-y: hidden;
+    }
+
+    .slide-card {
+        width: 80%;
+        max-width: 22.5rem;
+        flex: 0 0 auto;
+        box-shadow: 0 .25rem .6rem rgba(0, 0, 0, 0.12);
+    }
+
+    .slide-img {
+        height: 12.5rem;
+        object-fit: cover;
+    }
+
+    .slider-btn {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .title-violenze {
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 0.25rem;
+        padding: 0 1rem;
+    }
+
+    .title-violenze+p {
+        text-align: center;
+        font-size: 1rem;
+        margin-top: 0.25rem;
+    }
+
+    /* Make the two-column stats area stack vertically */
+    .container-fluid .row.panel>.col-5,
+    .container-fluid .row.panel>.col-7 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .stat-violenze {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+
+    .stat-title {
+        font-size: 1.1rem;
+    }
+
+
+    .stat-number {
+        font-size: clamp(24px, 6vw, 36px);
+    }
+
+
+    .barra-navigazione .link-navbar,
+    .barra-navigazione .tasti-navbar,
+    .barra-navigazione .link-navbar-selected {
+        display: none !important;
+    }
+
+    .slogan {
+        font-size: 3.5rem;
+    }
+
+    .col-6.d-flex {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .card {
+        width: 60%;
+    }
+
+    .titolo-paragrafo-1 {
+        font-size: 2.625rem;
+        margin-top: 3.75rem;
+        margin-bottom: 1.875rem;
+        padding: 0 1rem;
+        text-align: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        transition: none;
+        transform: none;
     }
 }
