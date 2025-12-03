@@ -757,10 +757,6 @@ img {
 }
 
 
-.stat-row {
-    border-bottom: 1px dashed rgba(0, 0, 0, 0.05);
-}
-
 .stat-title {
     color: #333;
     margin: 0.25rem 0;
@@ -800,10 +796,6 @@ img {
         max-width: 100%;
         padding-left: 1rem;
         padding-right: 1rem;
-    }
-
-    .stat-row {
-        padding: 1rem 0;
     }
 
     .stat-violenze {
