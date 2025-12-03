@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="javascripts/index.js"></script>
+</head>
+
+<body>
+
+
+    <header class=" fixed-top" id="header">
+
+
+
+        <div class="col-12 barra-navigazione">
+
+
+            <div class="row">
+                <div class="col-2 d-flex align-items-center">
+                    <a href="index.html" class="titolo">SafeNet</a>
+                </div>
+
+
+                <div class="col-2 text-center d-flex align-items-center justify-content-center">
+                    <a href="violenze/index.html" class="link-navbar">VIOLENZE</a>
+                </div>
+
+                <div class="col-2 text-center d-flex align-items-center justify-content-center">
+                    <a href="faq/index.html" class="link-navbar">FAQ</a>
+                </div>
+
+                <div class="col-2 text-center d-flex align-items-center justify-content-center">
+                    <a href="#" class="tasti-navbar">PROVA</a>
+                </div>
+
+                <div class="col-2 text-center d-flex align-items-center justify-content-center">
+                    <a href="#" class="tasti-navbar">PROVA</a>
+                </div>
+
+                <div class="col-2 d-flex align-items-center justify-content-end">
+                    <svg id="hamburgerBtn" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                        class="bi bi-list hamburger-menu" viewBox="0 0 16 16" role="button" aria-label="Menu">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+        <!-- header extra removed per request -->
+
+    </header>
+
+
+
+    <div class="container-fluid immagine-rete" id="immagineRete">
+        <div class="immagine-rete__frame position-relative">
+            <img src="img/immagine-principale.jpeg" alt="Immagine principale" fetchpriority="high" decoding="async">
+
+            <div class="immagine-rete__overlay" aria-hidden="false">
+                <div class="overlay-content">
+                    <div class="col-8">
+                        <h1 class="hero-title">Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry.</h1>
+                        <p class="hero-sub">Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="immagine-rete__cover" id="immagineReteCover" aria-hidden="true"></div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid hero panel">
+
+        <div class="row" style="height: 100%;">
+
+            <div class="col-6 d-flex flex-column align-items-center justify-content-center">
+                <h1 class="slogan reveal">Slogan</h1>
+
+
+
+                <p class="fw-bolder">breve descrizione</p>
+            </div>
+
+
+            <div class="col-6 d-flex flex-column align-items-center justify-content-center">
+
+
+
+                <div class="immagine-principale reveal">
+                    <div class="row">
+                        <div class="col-12 d-flex align-items-center justify-content-cente">
+                            <img src="img/grey.jpg" alt="" loading="lazy" decoding="async">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="card reveal">
+                    <div class="row">
+
+                        <div class="col-5 d-flex align-items-center justify-content-center">
+                            <img src="img/grey.jpg" alt="" loading="lazy" decoding="async">
+
+                        </div>
+
+                        <div class="col-7 d-flex align-items-center justify-content-center">
+                            <p>prova</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <section class="container-fluid my-5 panel">
+        <h2 class="text-center mb-4">Slider di card</h2>
+
+        <div class="cards-slider">
+            <button class="slider-btn prev" id="sliderPrev" aria-label="Precedente">‹</button>
+            <div class="cards-track" id="cardsTrack">
+                <article class="slide-card reveal">
+                    <img src="img/grey.jpg" alt="" class="slide-img" loading="lazy" decoding="async">
+                    <div class="slide-overlay">
+                        <h3 class="slide-title">Card 1</h3>
+                        <p class="slide-text">Descrizione breve della card 1.</p>
+                    </div>
+                </article>
+
+                <article class="slide-card reveal">
+                    <img src="img/grey.jpg" alt="" class="slide-img" loading="lazy" decoding="async">
+                    <div class="slide-overlay">
+                        <h3 class="slide-title">Card 2</h3>
+                        <p class="slide-text">Descrizione breve della card 2.</p>
+                    </div>
+                </article>
+
+                <article class="slide-card reveal">
+                    <img src="img/grey.jpg" alt="" class="slide-img" loading="lazy" decoding="async">
+                    <div class="slide-overlay">
+                        <h3 class="slide-title">Card 3</h3>
+                        <p class="slide-text">Descrizione breve della card 3.</p>
+                    </div>
+                </article>
+
+                <article class="slide-card reveal">
+                    <img src="img/grey.jpg" alt="" class="slide-img" loading="lazy" decoding="async">
+                    <div class="slide-overlay">
+                        <h3 class="slide-title">Card 4</h3>
+                        <p class="slide-text">Descrizione breve della card 4.</p>
+                    </div>
+                </article>
+
+                <article class="slide-card reveal">
+                    <img src="img/grey.jpg" alt="" class="slide-img">
+                    <div class="slide-overlay">
+                        <h3 class="slide-title">Card 5</h3>
+                        <p class="slide-text">Descrizione breve della card 5.</p>
+                    </div>
+                </article>
+            </div>
+            <button class="slider-btn next" id="sliderNext" aria-label="Successivo">›</button>
+        </div>
+    </section>
+
+
+
+
+
+
+    <div class="container-fluid intro-section panel">
+        <div class="row">
+
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <h1 class="titolo-paragrafo-1 reveal">Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry.</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1"></div>
+
+            <div class="col-5 d-flex align-items-center justify-content-center">
+                <h4 class="paragrafo-1 reveal">Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</h4>
+            </div>
+
+            <div class="col-2 text-center d-flex align-items-center justify-content-center">
+                <a href="#" class="tasti-navbar reveal">Scopri di più</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="container-fluid panel">
+
+        <div class="row immagini-espositive">
+
+            <div class="col-1"></div>
+
+            <div class="col-5 d-flex flex-column align-items-center justify-content-center">
+                <img src="img/grey.jpg" alt="" class="reveal">
+            </div>
+
+            <div class="col-5 d-flex flex-column align-items-center justify-content-center">
+                <img src="img/grey.jpg" alt="" class="reveal">
+
+            </div>
+
+            <div class="col-1"></div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <div id="mobilePanel" class="overlay-panel" aria-hidden="true">
+        <div class="panel-content">
+            <button class="close" aria-label="Chiudi pannello">&times;</button>
+            <nav class="d-flex flex-column align-items-center justify-content-center h-100">
+                <a href="violenze/index.html" class="link-navbar mb-3">VIOLENZE</a>
+                <a href="faq/index.html" class="link-navbar mb-3">FAQ</a>
+                <a href="#" class="tasti-navbar mb-3">PROVA 3</a>
+            </nav>
+        </div>
+    </div>
+
+</body>
+
+</html>
