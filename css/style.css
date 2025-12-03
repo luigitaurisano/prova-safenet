@@ -849,11 +849,6 @@ img {
         font-size: clamp(20px, 8vw, 32px);
     }
 
-    /* small gutters for very narrow screens */
-    .container-fluid {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
 }
 
 @media (max-width: 576px) {
@@ -892,6 +887,7 @@ img {
         padding-left: 0;
         padding-right: 0;
     }
+
 
 
     /* Prevent horizontal overflow from container gutters */
