@@ -32,7 +32,9 @@ img {
 
 /* Mobile horizontal-scroll fix: prevent hero image from causing page overflow */
 @media (max-width: 768px) {
-    html, body {
+
+    html,
+    body {
         overflow-x: hidden;
     }
 }
@@ -205,7 +207,7 @@ img {
 }
 
 @media (max-width: 768px) {
-    
+
 
     .hero-title {
         font-size: 2rem;
@@ -213,12 +215,13 @@ img {
 }
 
 @media (max-width: 576px) {
-    
+
 
     .hero-title {
         font-size: 1.6rem;
     }
-    .hero-sub{
+
+    .hero-sub {
         font-size: 0.8rem;
     }
 }
@@ -306,6 +309,7 @@ img {
         transform: none !important;
     }
 }
+
 .tasti-navbar:hover {
     transform: scale(1.1);
 }
@@ -667,6 +671,8 @@ img {
         padding-left: 0.75rem;
         padding-right: 0.75rem;
         gap: 0.75rem;
+
+        overflow-y: hidden;
     }
 
     .slide-card {
@@ -784,15 +790,16 @@ img {
         margin-bottom: 0.25rem;
         padding: 0 1rem;
     }
-    .title-violenze + p {
+
+    .title-violenze+p {
         text-align: center;
         font-size: 1rem;
         margin-top: 0.25rem;
     }
 
     /* Make the two-column stats area stack vertically */
-    .container-fluid .row.panel > .col-5,
-    .container-fluid .row.panel > .col-7 {
+    .container-fluid .row.panel>.col-5,
+    .container-fluid .row.panel>.col-7 {
         flex: 0 0 100%;
         max-width: 100%;
         padding-left: 1rem;
@@ -808,7 +815,7 @@ img {
         padding: 1rem;
     }
 
-    .stat-title{
+    .stat-title {
         font-size: 1.1rem;
     }
 
@@ -817,7 +824,7 @@ img {
         font-size: clamp(24px, 6vw, 36px);
     }
 
-    
+
 }
 
 @media (max-width: 576px) {
@@ -874,7 +881,7 @@ img {
 }
 
 
-.title-violenze{
+.title-violenze {
     font-size: 3.4375rem;
     font-weight: bolder;
 }
@@ -886,10 +893,139 @@ img {
         padding-right: 0;
     }
 
-    
+
+    .container-stat-violenze {
+        margin-right: 0;
+    }
+
 
     /* Prevent horizontal overflow from container gutters */
-    html, body {
+    html,
+    body {
         overflow-x: hidden;
+    }
+}
+
+
+.container-stat-violenze {
+    margin-right: 2rem;
+    gap: 1rem;
+}
+
+
+.footer {
+    margin-top: 3rem;
+    background: linear-gradient(90deg, #2f2f2f 0%, #161616 100%);
+    color: #fff;
+    padding: 2.5rem 1rem;
+}
+
+.footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-block {
+    flex: 1 1 220px;
+}
+
+.footer .brand {
+    font-weight: 900;
+    font-size: 1.25rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer .brand-desc {
+    color: #d9d9d9;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+}
+
+.footer-links {
+    text-align: center;
+}
+
+.footer-links strong {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.5rem;
+    display: inline-block;
+    text-align: left;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    opacity: .9;
+    display: block;
+}
+
+.footer-links a:hover {
+    color: #ffb921;
+    opacity: 1;
+}
+
+.footer-contact a {
+    color: #fff;
+    text-decoration: underline
+}
+
+.footer-social {
+    margin-top: 0.5rem
+}
+
+.footer-social .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.04);
+    margin-right: 0.5rem;
+    color: #fff
+}
+
+.footer-social .social-icon svg {
+    display: block
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    text-align: center;
+    color: #cfcfcf;
+    font-size: 0.9rem
+}
+
+@media (max-width: 768px) {
+    .footer-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center
+    }
+
+    .footer-block {
+        flex: 1 1 100%
+    }
+
+    .footer-links ul {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        align-items: center
     }
 }
