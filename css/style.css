@@ -894,11 +894,6 @@ img {
     }
 
 
-    .container-stat-violenze {
-        margin-right: 0;
-    }
-
-
     /* Prevent horizontal overflow from container gutters */
     html,
     body {
@@ -908,7 +903,6 @@ img {
 
 
 .container-stat-violenze {
-    margin-right: 2rem;
     gap: 1rem;
 }
 
