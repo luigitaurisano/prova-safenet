@@ -179,8 +179,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-/* header expansion feature removed */
-
 
 document.addEventListener('DOMContentLoaded', function () {
 	const track = document.getElementById('cardsTrack');
@@ -247,87 +245,12 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', onScroll, { passive: true });
 });
 
-// Hero cover: make header height available to CSS and animate cover growth on scroll
-document.addEventListener('DOMContentLoaded', function () {
-	const header = document.getElementById('header');
-	const hero = document.getElementById('immagineRete');
-	const cover = document.getElementById('immagineReteCover');
 
-	// Cache hero height to avoid measuring every frame. Recompute on resize.
-	let heroHeight = window.innerHeight;
 
-	function updateHeaderHeight() {
-		const h = header ? header.offsetHeight : 0;
-		document.documentElement.style.setProperty('--header-height', h + 'px');
-		// Let CSS control the hero height; remove any inline height previously set by JS.
-		if (hero) hero.style.removeProperty('height');
-		// Update cached hero height
-		heroHeight = hero ? hero.offsetHeight || window.innerHeight : window.innerHeight;
-	}
 
-	let ticking = false;
-	function updateCover() {
-		if (!hero || !cover) return;
-		// read-only layout measurement
-		const rect = hero.getBoundingClientRect();
-		// Use cached heroHeight to avoid re-measuring height each frame when possible
-		const h = heroHeight || rect.height || window.innerHeight;
-		// progress 0..1 as hero scrolls out of view
-		const progress = Math.min(Math.max((-rect.top) / h, 0), 1);
-		// use transform (GPU) instead of changing height to avoid layout thrash
-		const translatePct = (1 - progress) * 100; // 100% -> 0%
-		cover.style.transform = `translateY(${translatePct}%)`;
-	}
-
-	window.addEventListener('resize', function () {
-		updateHeaderHeight();
-		// Also update once to keep cover in sync
-		updateCover();
-	}, { passive: true });
-
-	window.addEventListener('scroll', function () {
-		if (!ticking) {
-			window.requestAnimationFrame(function () {
-				updateCover();
-				ticking = false;
-			});
-			ticking = true;
-		}
-	}, { passive: true });
-
-	updateHeaderHeight();
-	updateCover();
-});
-
-	// FAQ: sync +/− icon and aria-expanded with the <details> open state
-	document.addEventListener('DOMContentLoaded', function () {
-		const faqItems = document.querySelectorAll('.faq-item');
-		if (!faqItems.length) return;
-
-		faqItems.forEach(details => {
-			const summary = details.querySelector('summary');
-			const icon = summary ? summary.querySelector('.faq-icon') : null;
-
-			const update = () => {
-				const isOpen = details.hasAttribute('open');
-				if (summary) summary.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-				if (icon) icon.textContent = isOpen ? '−' : '+';
-			};
-
-			// initialize
-			update();
-
-			// Listen for native toggle event on <details>
-			details.addEventListener('toggle', update);
-
-			// Improve keyboard interaction: open on Enter/Space when summary focused
-			if (summary) {
-				summary.addEventListener('keydown', (e) => {
-					if (e.key === 'Enter' || e.key === ' ') {
-						// default toggles, but ensure update after next tick
-						requestAnimationFrame(update);
-					}
-				});
-			}
-		});
-	});
+function downloadFile() {
+    const link = document.createElement("a");
+    link.href = "assets/materiali.txt";
+    link.download = "materiali.txt";
+    link.click();
+}
