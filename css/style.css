@@ -352,7 +352,6 @@ img {
     background: #fff !important;
 }
 
-
 .cards-slider {
     position: relative;
     width: 100%;
@@ -385,7 +384,8 @@ img {
     overflow: hidden;
     transition: all 0.3s ease;
 }
-.slide-card:hover{
+
+.slide-card:hover {
     transform: scale(1.06);
     z-index: 2;
 }
@@ -660,7 +660,7 @@ img {
     font-size: 0.9rem
 }
 
-.download-button{
+.download-button {
     font-size: 1.5rem;
     background: linear-gradient(to right, rgb(83, 83, 83) 0%, black 100%);
     color: white;
@@ -690,8 +690,25 @@ img {
     box-sizing: border-box;
 }
 
-.download-button:hover{
+.download-button:hover {
     transform: scale(1.1);
+}
+
+.text-logo {
+    border-left: 3px solid grey;
+    padding-left: 2rem;
+    text-align: left;
+}
+
+.sezione-logo{
+    width: 50%;
+}
+
+@media (max-width: 992px) {
+    .sezione-logo{
+        margin-top: 5rem;
+        width: 100%;
+    }
 }
 
 
