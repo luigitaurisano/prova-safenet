@@ -734,7 +734,7 @@ img {
     border-left: 5px solid rgb(239, 155, 0);
     padding: 1.5rem;
     border-radius: 1rem;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .25);
+    box-shadow: 0 .5rem 1rem #00000040;
 }
 
 
@@ -764,30 +764,26 @@ img {
 
 
 .img-caratteristiche {
-    width: 90%;
+    width: 80%;
     border-radius: 20px;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .25)
 }
 
+.cards-slider .card-caratteristiche {
+    flex: 0 0 90%;
+    max-width: 90%;
+    margin: 0 0.5rem;
+}
+
+
 @media (max-width: 992px) {
     .img-caratteristiche {
         width: 80%;
-        margin-bottom: 3rem;
-    }
-
-    .card-caratteristiche {
-        width: 75%;
-        margin-left: 3rem;
-        margin-right: 3rem;
+        margin-bottom: 1rem;
     }
 }
 
 @media (max-width: 768px) {
-    .card-caratteristiche {
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-
     .img-caratteristiche {
         width: 100%;
     }
@@ -938,7 +934,6 @@ img {
         margin-top: 2.5rem;
         margin-bottom: 1.25rem;
         line-height: 1.2;
-        text-align: left;
     }
 
     .paragrafo-1 {
@@ -1089,7 +1084,7 @@ img {
         margin-top: 3.75rem;
         margin-bottom: 1.875rem;
         padding: 0 1rem;
-        text-align: center;
+        text-align: left;
     }
 }
 

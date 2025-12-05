@@ -46,19 +46,24 @@ function initHamburger() {
 
 
 function initSlider() {
-  const track = document.getElementById('cardsTrack');
-  const prev = document.getElementById('sliderPrev');
-  const next = document.getElementById('sliderNext');
-  if (!track) return;
+  const sliders = document.querySelectorAll('.cards-slider');
+  if (!sliders.length) return;
 
-  const getScrollAmount = () => Math.round(track.clientWidth * 0.8);
+  sliders.forEach(slider => {
+    const track = slider.querySelector('.cards-track');
+    const prev = slider.querySelector('.slider-btn.prev');
+    const next = slider.querySelector('.slider-btn.next');
+    if (!track) return;
 
-  if (next) next.addEventListener('click', () => {
-    track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
-  });
+    const getScrollAmount = () => Math.round(track.clientWidth * 0.8);
 
-  if (prev) prev.addEventListener('click', () => {
-    track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+    if (next) next.addEventListener('click', () => {
+      track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+    });
+
+    if (prev) prev.addEventListener('click', () => {
+      track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+    });
   });
 }
 
