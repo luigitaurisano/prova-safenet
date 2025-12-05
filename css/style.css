@@ -1,5 +1,12 @@
+:root{
+    --gradient-bg: linear-gradient(to right, white 0%, rgb(177, 177, 177) 100%);
+}
+
+
+
+
 body {
-    background: linear-gradient(to right, white 0%, rgb(177, 177, 177) 100%);
+    background: var(--gradient-bg);
 }
 
 
@@ -180,7 +187,7 @@ img {
     bottom: 0;
     height: 100%;
     transform: translateY(100%);
-    background: linear-gradient(to right, white 0%, rgb(177, 177, 177) 100%);
+    background: var(--gradient-bg);
     z-index: 3;
     pointer-events: none;
 
@@ -193,7 +200,7 @@ img {
 .panel {
     position: relative;
     z-index: 2;
-    background: linear-gradient(to right, white 0%, rgb(177, 177, 177) 100%);
+    background: var(--gradient-bg);
 }
 
 @media (max-width: 576px) {
@@ -225,7 +232,7 @@ img {
     display: inline-block;
     width: 40%;
     padding: 0.625rem;
-    background: linear-gradient(to right, white 0%, rgb(177, 177, 177) 100%);
+    background: var(--gradient-bg);
 }
 
 .card img {
@@ -374,7 +381,7 @@ img {
 .slide-card {
     scroll-snap-align: start;
     width: 34.375rem;
-    background: linear-gradient(180deg, #fff 0%, #f3f3f3 100%);
+    background: white;
     border-radius: 1rem;
     padding: 0;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.12);
@@ -723,7 +730,7 @@ img {
 
 
 .fact-box {
-  background: linear-gradient(to right, #fff 0%, #eaeaea 100%);
+  background: white;
   border-left: 5px solid rgb(239, 155, 0);
   padding: 1.5rem;
   border-radius: 1rem;
