@@ -1,4 +1,4 @@
-:root{
+:root {
     --gradient-bg: linear-gradient(to right, white 0%, rgb(177, 177, 177) 100%);
 }
 
@@ -708,14 +708,14 @@ img {
     text-align: left;
 }
 
-.sezione-logo{
+.sezione-logo {
     width: 50%;
 }
 
 
 .card.shadow-sm {
-  border-radius: 1rem;
-  background: #fff;
+    border-radius: 1rem;
+    background: #fff;
 }
 
 
@@ -730,11 +730,67 @@ img {
 
 
 .fact-box {
-  background: white;
-  border-left: 5px solid rgb(239, 155, 0);
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .25);
+    background: white;
+    border-left: 5px solid rgb(239, 155, 0);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .25);
+}
+
+
+
+.card-caratteristiche {
+    border-radius: 20px;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .25)
+}
+
+.card-caratteristiche h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* .card-caratteristiche svg{
+    margin-top: 1rem;
+    color: rgb(239, 155, 0);
+}  */
+.card-caratteristiche p {
+    color: grey;
+}
+
+
+.img-caratteristiche {
+    width: 90%;
+    border-radius: 20px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .25)
+}
+
+@media (max-width: 992px) {
+    .img-caratteristiche {
+        width: 80%;
+        margin-bottom: 3rem;
+    }
+
+    .card-caratteristiche {
+        width: 75%;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-caratteristiche {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .img-caratteristiche {
+        width: 100%;
+    }
 }
 
 
@@ -744,7 +800,7 @@ img {
 
 
 @media (max-width: 992px) {
-    .sezione-logo{
+    .sezione-logo {
         margin-top: 5rem;
         width: 100%;
     }

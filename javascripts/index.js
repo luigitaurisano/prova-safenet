@@ -80,7 +80,7 @@ function initPanels() {
         reveals.forEach(el => el.style.transitionDelay = '');
       }
     });
-  }, { threshold: 0.45 });
+  }, { threshold: 0.2 });
 
   panels.forEach(p => observer.observe(p));
 }
