@@ -538,10 +538,11 @@ img {
 }
 
 .stat-violenze {
-    background: linear-gradient(to right, white 0%, rgb(177, 177, 177) 100%);
+    /* background: linear-gradient(to right, white 0%, rgb(177, 177, 177) 100%); */
+    background-color: white;
     padding: 1.25rem;
-    border-radius: 3.125rem;
-    border: 0.1875rem solid grey;
+    border-radius: 2rem;
+    /* border: 0.1875rem solid grey; */
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .25);
     transition: all 0.3s ease;
 }
@@ -704,6 +705,28 @@ img {
     width: 50%;
 }
 
+
+.card.shadow-sm {
+  border-radius: 1rem;
+  background: #fff;
+}
+
+
+
+.text-muted p{
+  color: #666 !important;
+}
+
+.text-muted svg.bi {
+  color: #d35400;
+}
+
+
+
+
+
+
+
 @media (max-width: 992px) {
     .sezione-logo{
         margin-top: 5rem;
@@ -796,8 +819,9 @@ img {
     .stat-violenze {
         flex-direction: column;
         text-align: center;
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 1rem;
     }
 
     .stat-violenze .stat-title,
@@ -969,11 +993,11 @@ img {
     }
 
 
-    .barra-navigazione .link-navbar,
+    /* .barra-navigazione .link-navbar,
     .barra-navigazione .tasti-navbar,
     .barra-navigazione .link-navbar-selected {
         display: none !important;
-    }
+    } */
 
     .slogan {
         font-size: 3.5rem;
