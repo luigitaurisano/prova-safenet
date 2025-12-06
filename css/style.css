@@ -791,6 +791,119 @@ img {
 
 
 
+.nav-tabs {
+    border: none;
+    display: flex;
+    gap: 24px;
+}
+
+/* link base */
+.nav-tabs .nav-link {
+    position: relative;
+    border: none;
+    background: none;
+
+    color: #777;
+    text-decoration: none;
+    font-weight: 500;
+
+    padding: 12px 4px;
+}
+
+/* hover */
+.nav-tabs .nav-link:hover {
+    color: #000;
+}
+
+/* active */
+.nav-tabs .nav-link.active {
+    color: #000;
+    background: none;
+}
+
+/* underline animation */
+.nav-tabs .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+    background: black;
+
+    transition: width .25s ease;
+}
+
+.nav-tabs .nav-link.active::after {
+    width: 100%;
+}
+
+
+.tabs-wrapper {
+    position: relative;
+}
+
+
+@media (max-width: 768px) {
+    .scroll-hint {
+        position: absolute;
+        right: 6px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        font-size: 22px;
+        color: #000;
+        opacity: 0.35;
+        pointer-events: none;
+
+        animation: hintMove 1.6s ease-in-out infinite;
+    }
+
+    @keyframes hintMove {
+        0% {
+            transform: translateY(-50%) translateX(0);
+        }
+
+        50% {
+            transform: translateY(-50%) translateX(6px);
+        }
+
+        100% {
+            transform: translateY(-50%) translateX(0);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-tabs {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        gap: 16px;
+
+        /* nasconde scrollbar ma mantiene lo swipe */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .nav-tabs::-webkit-scrollbar {
+        display: none;
+        /* Chrome/Safari */
+    }
+
+    .nav-tabs .nav-link {
+        font-size: 0.95rem;
+        padding: 14px 8px;
+        /* più comodo per il tap */
+        white-space: nowrap;
+    }
+
+    .nav-tabs .nav-link::after {
+        bottom: -4px;
+        height: 2px;
+    }
+}
+
 
 
 
